@@ -1,0 +1,13 @@
+# markdown_to_html.py
+
+import markdown
+
+def convert_md_to_html(md_file, html_file):
+    with open(md_file, "r") as file:
+        text = file.read()
+    html = markdown.markdown(text)
+    with open(html_file, "w") as file:
+        file.write(html)
+
+# Sample usage
+convert_md_to_html("example.md", "example.html")
